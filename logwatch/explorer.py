@@ -1,9 +1,14 @@
 from logwatch import lire_log
 
 sample_logs, ignorees = lire_log("sample-logs.log")
+dix_echecs, ignorees2 = lire_log("dix-echecs.log")
 
 print(f"Nombre de lignes lues : {len(sample_logs)}")
 print(f"et nombre de lignes ignorees : {ignorees}")
+
+print(f"Nombre de lignes lues parmi les dix échecs : {len(dix_echecs)}")
+print(f"et nombre de lignes ignorees parmi les dix échecs : {ignorees2}")
+#D2 réagit à partir de 11 échecs, c'est la comparaison entre le seuil et le nombre d'échecs par ip qui le décide
 
 
 """Compte le nombre de requetes par famille de code de réponse"""
